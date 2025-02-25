@@ -1,15 +1,15 @@
 batch_size: 16
-script_dir: /home/hlavsja3/scent_release/identification/
-#dir with singularity image
-root_dir: /mnt/personal/hlavsja3/scent/
-save_dir: /mnt/personal/hlavsja3/release_test/identification/models/
-plots_dir: /mnt/personal/hlavsja3/release_test/identification/plots/
-logs_dir: /mnt/personal/hlavsja3/release_test/identification/logs/
-tic_data_dir_registered: &tic_data_dir_registered /mnt/data/vrg/spetlrad/data/scent/dataset/warped/fcn_plus_cos_22_tic/
+script_dir: /home/user/project/scripts/
+# Directory with singularity image
+root_dir: /mnt/storage/project_root/
+save_dir: /mnt/storage/project/models/
+plots_dir: /mnt/storage/project/plots/
+logs_dir: /mnt/storage/project/logs/
+tic_data_dir_registered: &tic_data_dir_registered /mnt/data/mock_dataset/warped_data/
 data_dir: *tic_data_dir_registered
-cache_dir: /data/temporary/hlavsja3/cos_22/
-master_mask_filepath: /mnt/data/vrg/spetlrad/data/scent/dataset/reg_no_points/master_mask.png
-txt_dir: '/mnt/personal/hlavsja3/vscht_data/'
+cache_dir: /data/temp/cache/
+master_mask_filepath: /mnt/data/mock_dataset/mask/master_mask.png
+txt_dir: '/mnt/storage/text_data/'
 affine_shift_max_px: 5
 subsample: -1
 num_folds: 10
@@ -21,7 +21,6 @@ training_params:
     save_after: 10
     valid_after: 1
     sampler_size: 1
-
 
 model_classname: models.LinearProjectionModel1
 model_params:

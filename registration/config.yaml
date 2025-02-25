@@ -2,21 +2,21 @@
 
 constants:
   t1_shift: -500
-  dir_txt: '/mnt/personal/hlavsja3/vscht_data/'
-  dir_pt: '/mnt/personal/hlavsja3/cdf_processed/'
+  dir_txt: '/mnt/storage/mock_text_data/'
+  dir_pt: '/mnt/storage/mock_cdf_processed/'
   num_folds: 5
   fold_num: 1
-  save_dir: '/mnt/personal/hlavsja3/release_test/'
-  folds_references_dir: '/mnt/personal/hlavsja3/cvpr/registration/folds/'
-  avg_spectra_dir: '/home/hlavsja3/scent/vscht_scripts/avg_spectrum/'
-  m_folds_path: 'small_folds_m.yaml'
-  f_folds_path: 'small_folds_f.yaml'
-  compound_numbers_cnn_path: 'compound_numbers_cnn.yaml'
-  compound_numbers_path: 'compound_numbers.yaml'
-  reference_sample: 'F4_05_system1.pt'
+  save_dir: '/mnt/storage/project/release_test/'
+  folds_references_dir: '/mnt/storage/project/registration/folds/'
+  avg_spectra_dir: '/home/user/project/scripts/avg_spectrum/'
+  m_folds_path: 'mock_small_folds_m.yaml'
+  f_folds_path: 'mock_small_folds_f.yaml'
+  compound_numbers_cnn_path: 'mock_compound_numbers_cnn.yaml'
+  compound_numbers_path: 'mock_compound_numbers.yaml'
+  reference_sample: 'mock_F4_05_system1.pt'
   warp_metric: 'dot'
   testing_while_training_cnn: True
-  dir_all_spectra: '/mnt/personal/hlavsja3/cvpr/registration/all_spectrum/'
+  dir_all_spectra: '/mnt/storage/project/cvpr/registration/all_spectrum/'
 
 calibration_compounds:
   - Heptacosane
@@ -38,7 +38,7 @@ calibration_compounds:
   - Dodecanamide, N-allyl-
   - 2,5-pyrrolidinedione, 3-hexadecyl-
   - Fumaric acid, 2-dimethylaminoethyl heptyl ester
-  - Cholesta-3,5-diene (izomer 2)
+  - Cholesta-3,5-diene (isomer 2)
   - Cholesta-3,5-dien-7-one
   - Cholesta-4,6-dien-3-one
   - Cholest-4-en-3-one
@@ -63,4 +63,3 @@ triangles:
   - 20 46 65
   - 20 29 46
   - 20 29 32
-
