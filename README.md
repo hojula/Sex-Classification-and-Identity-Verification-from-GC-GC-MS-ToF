@@ -166,6 +166,6 @@ For academic citations, use:
 
 ---
 ## Authors & Acknowledgments
-Developed by **Jan Hlavsa**, **Ing. Bc Radim Špetlík**, and **prof. Ing. Jiří Matas, Ph.D.** at the **Czech Technical University in Prague**.
+Developed by **Jan Hlavsa**, **Ing. Bc. Radim Špetlík**, and **prof. Ing. Jiří Matas, Ph.D.** at the **Czech Technical University in Prague**.
 
 Special thanks to contributors and libraries used in this project.
