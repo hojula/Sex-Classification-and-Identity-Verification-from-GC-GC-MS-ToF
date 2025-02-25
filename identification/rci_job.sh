@@ -13,17 +13,16 @@
 #SBATCH -o &LOGSDIR/slurm.TEST_&BATCH_SIZE_%A.%a_%N.out # STDOUT
 #SBATCH -e &LOGSDIR/slurm.TEST_&BATCH_SIZE_%A.%a_%N.err # STDERR
 
-
 #set your working directory
-cd "/home/hlavsja3/scent_release/identification/" || exit
+cd "/home/moq/some/scent_release/identification/" || exit
 
 #set your python path
-export PYTHONPATH="/home/hlavsja3/scent/cvpr/identification/:${PYTHONPATH}"
+export PYTHONPATH="/home/moq/some/scent/cvpr/identification/:${PYTHONPATH}"
 export OMP_NUM_THREADS=3
 export MKL_NUM_THREADS=3
 
 #set your singularity image name
-SINGULARITY_IMAGE_NAME="scent2"
+SINGULARITY_IMAGE_NAME="scent"
 
 # if env variable SLURM_JOB_ID is not defined, then define it
 if [ -z "${SLURM_JOB_ID}" ]; then
@@ -73,8 +72,6 @@ export NCCL_P2P_LEVEL=NVL
 export SLURM_JOB_ID="${SLURM_JOB_ID}"
 
 for node in ${node_list[@]}; do
-#    echo "srun at ${node}, node_global_rank ${node_global_rank["${node}"]}"
-#    srun -n1 -N1 -w "${node}" \
     singularity exec --nv --cleanenv \
     -B"${SCRATCH_DIR}:${SCRATCH_DIR}" \
     -B"${PROJECT_DIR}:${PROJECT_DIR}" \
@@ -92,6 +89,5 @@ for node in ${node_list[@]}; do
      --rdzv-backend=c10d \
      --rdzv-endpoint=${master_node} \
     ${SCRIPT_PATH} ${CONFIG_FILE} ${SLURM_JOB_ID} --clear_cache 2>&1 &
-#    python ${SCRIPT_PATH} ${CONFIG_FILE} ${SLURM_JOB_ID}
 done
 wait
